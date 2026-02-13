@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('head.html')
+  <title>Астрология</title>
+</head>
+<body>
+  <div class="video-bg">
+    <video class="video-bg__video" autoplay muted loop playsinline>
+      <source src="assets/video/bg.mp4" type="video/mp4">
+    </video>
+    <div class="video-bg__overlay"></div>
+  </div>
+  @@include('header.html')
+
+  <main class="main">
+    @@include('./sections/hero.html')
+    @@include('./sections/benefit.html')
+    @@include('./sections/why.html')
+    @@include('./sections/prices.html')
+    @@include('./sections/reviews.html')
+    @@include('./sections/faq.html')
+    @@include('./sections/contacts.html')
+  </main>
+
+  @@include('footer.html')
+  @@include('./sections/cookie.html')
+</body>
+</html>

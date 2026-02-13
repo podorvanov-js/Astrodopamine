@@ -1,0 +1,42 @@
+.reviews {
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__card {
+    background: #111;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #191919;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    transition: opacity 0.3s;
+    @media (max-width: 600px) {
+      padding: 20px;
+    }
+  }
+
+  &__author {
+    font-weight: 700;
+    color: #ff8000;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+}
