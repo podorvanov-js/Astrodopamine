@@ -16,7 +16,6 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^9.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^5.1.0",
     "gulp-strip-comments": "^2.5.2",

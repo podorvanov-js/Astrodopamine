@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import newer from 'gulp-newer';
-import imagemin from 'gulp-imagemin';
 import webpPlugin from 'gulp-webp';
 import sharpModule from 'sharp';
 import path from 'path';
@@ -26,10 +25,34 @@ function resize(scale, suffix) {
   });
 }
 
+function optimizeImages() {
+  return new Transform({
+    objectMode: true,
+    async transform(file, _, callback) {
+      if (file.isNull() || file.isStream()) return callback(null, file);
+      try {
+        const ext = path.extname(file.path).toLowerCase();
+        let pipeline = sharpModule(file.contents);
+        if (ext === '.jpg' || ext === '.jpeg') {
+          pipeline = pipeline.jpeg({ quality: 80, mozjpeg: true });
+        } else if (ext === '.png') {
+          pipeline = pipeline.png({ quality: 80, compressionLevel: 9 });
+        } else if (ext === '.svg' || ext === '.gif') {
+          return callback(null, file);
+        }
+        file.contents = await pipeline.toBuffer();
+        callback(null, file);
+      } catch (err) {
+        callback(err);
+      }
+    }
+  });
+}
+
 export function images() {
   return gulp.src(paths.images.src, { encoding: false })
     .pipe(newer(paths.images.dest))
-    .pipe(imagemin())
+    .pipe(optimizeImages())
     .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -44,7 +67,7 @@ export function imagesMobile() {
   return gulp.src(paths.images.src, { encoding: false })
     .pipe(newer({ dest: paths.images.dest, map: (p) => { const ext = path.extname(p); return p.slice(0, -ext.length) + '@1x' + ext; } }))
     .pipe(resize(0.5, '@1x'))
-    .pipe(imagemin())
+    .pipe(optimizeImages())
     .pipe(gulp.dest(paths.images.dest));
 }
 
