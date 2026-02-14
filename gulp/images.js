@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import newer from 'gulp-newer';
-import webpPlugin from 'gulp-webp';
 import sharpModule from 'sharp';
 import path from 'path';
 import { Transform } from 'stream';
@@ -49,6 +48,25 @@ function optimizeImages() {
   });
 }
 
+function toWebpTransform(quality) {
+  return new Transform({
+    objectMode: true,
+    async transform(file, _, callback) {
+      if (file.isNull() || file.isStream()) return callback(null, file);
+      try {
+        file.contents = await sharpModule(file.contents)
+          .webp({ quality })
+          .toBuffer();
+        const ext = path.extname(file.path);
+        file.path = file.path.slice(0, -ext.length) + '.webp';
+        callback(null, file);
+      } catch (err) {
+        callback(err);
+      }
+    }
+  });
+}
+
 export function images() {
   return gulp.src(paths.images.src, { encoding: false })
     .pipe(newer(paths.images.dest))
@@ -59,7 +77,7 @@ export function images() {
 export function toWebp() {
   return gulp.src(paths.images.src, { encoding: false })
     .pipe(newer({ dest: paths.images.dest, ext: '.webp' }))
-    .pipe(webpPlugin({ quality: 80 }))
+    .pipe(toWebpTransform(80))
     .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -75,6 +93,6 @@ export function toWebpMobile() {
   return gulp.src(paths.images.src, { encoding: false })
     .pipe(newer({ dest: paths.images.dest, ext: '@1x.webp' }))
     .pipe(resize(0.5, '@1x'))
-    .pipe(webpPlugin({ quality: 80 }))
+    .pipe(toWebpTransform(80))
     .pipe(gulp.dest(paths.images.dest));
 }
