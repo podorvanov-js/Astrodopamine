@@ -5,7 +5,7 @@ import { html } from './gulp/html.js';
 import { scss } from './gulp/scss.js';
 import { js } from './gulp/js.js';
 import { images, toWebp, imagesMobile, toWebpMobile } from './gulp/images.js';
-import { assets } from './gulp/assets.js';
+import { assets, publicFiles } from './gulp/assets.js';
 
 let isProduction = false;
 
@@ -23,8 +23,8 @@ function setProduction(done) {
   done();
 }
 
-const compile = gulp.parallel(htmlTask, scssTask, jsTask, allImages, assets);
-const watch = serve(htmlTask, scssTask, jsTask, allImages, assets);
+const compile = gulp.parallel(htmlTask, scssTask, jsTask, allImages, assets, publicFiles);
+const watch = serve(htmlTask, scssTask, jsTask, allImages, assets, publicFiles);
 
 export const backend = gulp.series(clean, compile);
 export const build = gulp.series(setProduction, clean, compile);

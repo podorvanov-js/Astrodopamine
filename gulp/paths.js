@@ -21,5 +21,9 @@ export const paths = {
   assets: {
     src: ['src/assets/**/*', '!src/assets/images/**/*.{jpg,jpeg,png,gif,svg,JPG,JPEG,PNG}'],
     dest: 'dist/assets'
+  },
+  public: {
+    src: 'src/public/**/*',
+    dest: 'dist'
   }
 };

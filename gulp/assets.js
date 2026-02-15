@@ -7,3 +7,9 @@ export function assets() {
     .pipe(newer(paths.assets.dest))
     .pipe(gulp.dest(paths.assets.dest));
 }
+
+export function publicFiles() {
+  return gulp.src(paths.public.src, { encoding: false })
+    .pipe(newer(paths.public.dest))
+    .pipe(gulp.dest(paths.public.dest));
+}
