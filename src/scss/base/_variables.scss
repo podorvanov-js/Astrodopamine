@@ -1,10 +1,30 @@
-$color-primary: #2563eb;
-$color-text: #1f2937;
-$color-text-light: #6b7280;
-$color-bg: #ffffff;
-$color-border: #e5e7eb;
+// Colors
+$color-accent: #ff8000;
+$color-accent-hover: #ff9400;
+$color-bg: #000;
+$color-card: #111;
+$color-card-shadow: #191919;
+$color-text: #fff;
+$color-text-secondary: #b6c2cc;
+$color-text-muted: rgba(255, 255, 255, 0.6);
+$color-text-soft: rgba(255, 255, 255, 0.7);
+$color-border: rgba(255, 255, 255, 0.08);
+$color-border-hover: rgba(255, 128, 0, 0.3);
+$color-accent-bg: rgba(255, 128, 0, 0.15);
 
-$font-base: "Montserrat", sans-serif;
+// Typography
+$font-base: 'Montserrat', Arial, sans-serif;
 
+// Layout
 $container-width: 1100px;
 $container-padding: 20px;
+
+// Border radius
+$radius-card: 14px;
+$radius-sm: 8px;
+
+// Breakpoints
+$bp-desktop: 920px;
+$bp-tablet: 760px;
+$bp-mobile: 580px;
+$bp-small-mobile: 460px;

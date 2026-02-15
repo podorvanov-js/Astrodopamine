@@ -1,9 +1,5 @@
-.faq__title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 35px;
-  text-align: center;
-}
+@use '../base/variables' as *;
+
 
 .faq__list {
   max-width: 800px;
@@ -24,12 +20,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 0;
+  padding: 30px 0;
   background: none;
   border: none;
-  color: #fff;
+  color: $color-text;
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -37,14 +34,14 @@
 
   @media (any-hover: hover) {
     &:hover {
-      color: #ff8000;
+      color: $color-accent;
     }
   }
 }
 
 .faq__arrow {
   flex-shrink: 0;
-  color: #ff8000;
+  color: $color-accent;
   transition: transform 0.3s;
 
   .faq__item.active & {
@@ -62,15 +59,15 @@
   }
 
   p {
-    color: #b6c2cc;
+    color: $color-text-secondary;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
-    padding: 0 0 20px;
+    padding: 0 0 30px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: $bp-mobile) {
   .faq__title {
     font-size: 1.5rem;
   }
