@@ -1,0 +1,48 @@
+@use '../base/variables' as *;
+
+.steps {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @media (max-width: $bp-desktop) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: $bp-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 128, 0, 0.12);
+    color: $color-accent;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: $color-text-muted;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}

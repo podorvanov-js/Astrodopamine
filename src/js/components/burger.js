@@ -9,6 +9,7 @@ export function burgerInit() {
 		const isOpen = nav.classList.toggle('active')
 		overlay.classList.toggle('active', isOpen)
 		burger.classList.toggle('active', isOpen)
+		document.documentElement.style.overflow = isOpen ? 'hidden' : ''
 		document.body.style.overflow = isOpen ? 'hidden' : ''
 	}
 
@@ -16,6 +17,7 @@ export function burgerInit() {
 		nav.classList.remove('active')
 		overlay.classList.remove('active')
 		burger.classList.remove('active')
+		document.documentElement.style.overflow = ''
 		document.body.style.overflow = ''
 	}
 

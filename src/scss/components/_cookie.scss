@@ -1,11 +1,13 @@
+@use '../base/variables' as *;
+
 .cookie {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #111;
+  background: $color-card;
   color: white;
   padding: 18px 22px;
-  border-top: 2px solid #ff8000;
+  border-top: 2px solid $color-accent;
   z-index: 99999;
   display: none;
   animation: cookie-slide-up 0.3s ease;
@@ -27,7 +29,7 @@
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 14px;
-    @media (max-width: 600px) {
+    @media (max-width: $bp-mobile) {
       flex-direction: column;
     }
   }
@@ -43,24 +45,24 @@
         opacity: 0.85;
       }
     }
-    @media (max-width: 600px) {
+    @media (max-width: $bp-mobile) {
       width: 100%;
     }
 
     &--primary {
-      background: #ff8000;
-      color: #fff;
+      background: $color-accent;
+      color: $color-text;
     }
 
     &--secondary {
       background: #666;
-      color: #fff;
+      color: $color-text;
     }
 
     &--outline {
       background: transparent;
-      color: #ff8000;
-      border: 1px solid #ff8000;
+      color: $color-accent;
+      border: 1px solid $color-accent;
     }
 
     &--full {
@@ -85,14 +87,14 @@
   position: fixed;
   bottom: 120px;
   right: 20px;
-  background: #111;
-  color: #fff;
-  border: 2px solid #ff8000;
+  background: $color-card;
+  color: $color-text;
+  border: 2px solid $color-accent;
   padding: 20px;
   width: 290px;
   border-radius: 10px;
   z-index: 99999;
-  @media (max-width: 600px) {
+  @media (max-width: $bp-mobile) {
     width: calc(100% - 40px);
     bottom: 130px;
     right: 20px;
@@ -117,9 +119,9 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #111;
-  border: 1px solid #ff8000;
-  color: #ff8000;
+  background: $color-card;
+  border: 1px solid $color-accent;
+  color: $color-accent;
   padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;

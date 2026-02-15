@@ -1,20 +1,80 @@
 <section class="hero">
 	<div class="hero__container container">
-		<div class="hero__image">
-			<picture>
-				<source srcset="assets/images/photo@1x.webp" media="(max-width: 768px)" type="image/webp" />
-				<source srcset="assets/images/photo@1x.png" media="(max-width: 768px)" />
-				<source srcset="assets/images/photo.webp" type="image/webp" />
-				<img class="image" loading="lazy" src="assets/images/photo.png" width="340" height="595" alt="Фото" />
-			</picture>
+		<div class="hero__author">
+			<svg class="hero__chart" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<!-- Outer ring -->
+				<circle cx="200" cy="200" r="195" stroke="rgba(255,128,0,0.15)" stroke-width="1" />
+				<circle cx="200" cy="200" r="170" stroke="rgba(255,128,0,0.12)" stroke-width="1" />
+				<!-- Inner rings -->
+				<circle cx="200" cy="200" r="120" stroke="rgba(255,128,0,0.1)" stroke-width="1" />
+				<circle cx="200" cy="200" r="70" stroke="rgba(255,128,0,0.08)" stroke-width="1" />
+				<!-- 12 house divisions -->
+				<line x1="200" y1="5" x2="200" y2="80" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="297" y1="30" x2="249" y2="92" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="370" y1="103" x2="304" y2="140" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="395" y1="200" x2="320" y2="200" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="370" y1="297" x2="304" y2="260" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="297" y1="370" x2="249" y2="308" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="200" y1="395" x2="200" y2="320" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="103" y1="370" x2="151" y2="308" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="30" y1="297" x2="96" y2="260" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="5" y1="200" x2="80" y2="200" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="30" y1="103" x2="96" y2="140" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<line x1="103" y1="30" x2="151" y2="92" stroke="rgba(255,128,0,0.12)" stroke-width="0.5" />
+				<!-- Aspect lines (cross-connections) -->
+				<line x1="200" y1="80" x2="304" y2="260" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<line x1="200" y1="80" x2="96" y2="260" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<line x1="96" y1="140" x2="304" y2="140" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<line x1="96" y1="260" x2="304" y2="260" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<line x1="96" y1="140" x2="249" y2="308" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<line x1="304" y1="140" x2="151" y2="308" stroke="rgba(255,128,0,0.07)" stroke-width="0.5" />
+				<!-- Planet dots on outer ring -->
+				<circle cx="200" cy="30" r="3" fill="rgba(255,128,0,0.3)" />
+				<circle cx="310" cy="75" r="2.5" fill="rgba(255,128,0,0.25)" />
+				<circle cx="365" cy="175" r="3" fill="rgba(255,128,0,0.3)" />
+				<circle cx="340" cy="310" r="2" fill="rgba(255,128,0,0.2)" />
+				<circle cx="200" cy="370" r="2.5" fill="rgba(255,128,0,0.25)" />
+				<circle cx="75" cy="290" r="3" fill="rgba(255,128,0,0.3)" />
+				<circle cx="40" cy="150" r="2" fill="rgba(255,128,0,0.2)" />
+				<circle cx="130" cy="45" r="2.5" fill="rgba(255,128,0,0.25)" />
+				<!-- Zodiac tick marks on outer ring -->
+				<g stroke="rgba(255,128,0,0.18)" stroke-width="0.8">
+					<line x1="200" y1="5" x2="200" y2="25" />
+					<line x1="297" y1="30" x2="289" y2="48" />
+					<line x1="370" y1="103" x2="354" y2="115" />
+					<line x1="395" y1="200" x2="375" y2="200" />
+					<line x1="370" y1="297" x2="354" y2="285" />
+					<line x1="297" y1="370" x2="289" y2="352" />
+					<line x1="200" y1="395" x2="200" y2="375" />
+					<line x1="103" y1="370" x2="111" y2="352" />
+					<line x1="30" y1="297" x2="46" y2="285" />
+					<line x1="5" y1="200" x2="25" y2="200" />
+					<line x1="30" y1="103" x2="46" y2="115" />
+					<line x1="103" y1="30" x2="111" y2="48" />
+				</g>
+			</svg>
+			<div class="hero__image">
+				<picture>
+					<source srcset="assets/images/photo@1x.webp" media="(max-width: 768px)" type="image/webp" />
+					<source srcset="assets/images/photo@1x.png" media="(max-width: 768px)" />
+					<source srcset="assets/images/photo.webp" type="image/webp" />
+					<img class="image" loading="lazy" src="assets/images/photo.png" width="340" height="595" alt="Алина — астролог" />
+				</picture>
+			</div>
+			<span class="hero__name">Алина - Астро - консультант</span>
 		</div>
 		<div class="hero__content">
-			<h1 class="hero__title">Расчет натальной карты и личного потенциала</h1>
+			<h1 class="hero__title">Найдите свой путь через&nbsp;натальную карту</h1>
 			<p class="hero__text">
-				Анализ прогностических показателей и тайминга. Четкая расшифровка аспектов без магии и воды. индивидуальные
-				онлайн-консультации и быстрые результаты
+				Чёткая расшифровка без эзотерики и&nbsp;воды. <br>
+				Практический инструмент для карьеры, отношений и&nbsp;самопознания.
 			</p>
-			<a href="#contacts" class="hero__button button">Бесплатная консультация</a>
+			<a href="#contacts" class="hero__button button">
+				<svg class="cta__tg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+					<path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.136.93-17.07 7.12-18.89 7.88-.392.163-.85.458-.83.94.02.435.39.712.754.87l4.71 1.613c.29.975 1.467 4.875 1.723 5.727.16.53.42 1.18.874 1.32.4.153.795.013 1.05-.186l2.878-2.67 4.647 3.625.11.066c.316.14.618.21.91.21.224 0 .438-.042.643-.126.698-.287.977-.952 1.006-1.027L23.5 3.06c.196-1.012-.36-1.434-.95-1.483zM10.7 14.142l-1.59 4.24-1.59-5.3L19.2 5.7l-8.5 8.442z"/>
+				</svg>
+				Бесплатная консультация
+			</a>
 		</div>
 	</div>
 </section>
