@@ -1,16 +1,17 @@
 @use '../base/variables' as *;
 
 .hero {
+  padding: 0;
   &__container {
     display: grid;
     grid-template-columns: 0.7fr 1fr;
     align-items: center;
     gap: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     @media (max-width: $bp-tablet) {
       grid-template-columns: 1fr;
       gap: 32px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
   }
 
