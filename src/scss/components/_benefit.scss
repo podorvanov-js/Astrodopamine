@@ -10,14 +10,14 @@
     align-items: center;
     justify-items: center;
     justify-self: center;
-    gap: 40px;
+    gap: 20px;
     @media (max-width: $bp-desktop) {
       grid-template-columns: repeat(2, 1fr);
       justify-items: stretch;
-      gap: 80px;
+      gap: 60px 80px;
     }
     @media (max-width: $bp-tablet) {
-      gap: 40px;
+      gap: 40px 20px;
     }
   }
 

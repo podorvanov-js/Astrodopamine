@@ -12,4 +12,16 @@
     max-width: none;
     flex-shrink: 0;
   }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: $bp-small-mobile) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
 }

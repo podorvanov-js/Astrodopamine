@@ -1,5 +1,21 @@
 @use 'variables' as *;
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -54,13 +70,24 @@ section {
   border: none;
   border-radius: $radius-sm;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.3s, color 0.3s;
   box-shadow: 0 4px 20px 2px #130c01;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  min-width: 320px;
+  &--light {
+    background: transparent;
+    border: 1px solid $color-accent ;
+    color: $color-accent;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
   @media (any-hover: hover) {
     &:hover {
       background: $color-accent-hover;
@@ -72,6 +99,7 @@ section {
   }
   @media (max-width: $bp-small-mobile) {
     width: 100%;
+    min-width: 0;
   }
 }
 .title {
