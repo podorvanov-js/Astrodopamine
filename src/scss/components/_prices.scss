@@ -169,6 +169,15 @@
     margin-bottom: 40px;
   }
 
+  &__actions {
+    display: grid;
+    gap: 40px;
+
+    @media (max-width: $bp-small-mobile) {
+      gap: 20px 40px;
+    }
+  }
+
 }
 
 .timer {
