@@ -178,13 +178,11 @@
   background: rgba($color-accent, 0.08);
   border: 1px solid rgba($color-accent, 0.25);
   border-radius: $radius-card;
-  padding: 14px 24px;
+  padding: 20px 30px;
 
   @media (max-width: $bp-mobile) {
     flex-direction: column;
     text-align: center;
-    padding: 14px 16px;
-    gap: 8px;
   }
 
   @media (max-width: $bp-small-mobile) {
@@ -205,13 +203,12 @@
 
     @media (max-width: $bp-mobile) {
       flex-direction: column;
-      gap: 6px;
     }
   }
 
   &__label {
     color: $color-text-soft;
-    font-size: 0.95rem;
+    font-size: 1rem;
     white-space: nowrap;
   }
 
@@ -228,7 +225,7 @@
   }
 
   &__number {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: $color-accent;
     min-width: 1.6ch;
@@ -237,7 +234,7 @@
   }
 
   &__desc {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.4);
   }
 
