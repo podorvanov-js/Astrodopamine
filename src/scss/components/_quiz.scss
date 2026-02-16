@@ -1,0 +1,160 @@
+@use '../base/variables' as *;
+
+.quiz {
+  &__progress {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    margin-top: 25px;
+    overflow: hidden;
+  }
+
+  &__progress-bar {
+    height: 100%;
+    background: $color-accent;
+    border-radius: 2px;
+    width: 0;
+    transition: width 0.4s ease;
+  }
+
+  &__counter {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 0 8px;
+  }
+
+  &__question {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 24px;
+    line-height: 1.4;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.15rem;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: $color-text;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    font-family: inherit;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $color-accent;
+        background: rgba($color-accent, 0.06);
+      }
+    }
+
+    &:active {
+      background: rgba($color-accent, 0.12);
+    }
+
+    @media (max-width: $bp-mobile) {
+      padding: 14px 14px;
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__option-icon {
+    flex-shrink: 0;
+    color: $color-accent;
+    display: flex;
+  }
+
+  // Result screen
+  &__result {
+    text-align: center;
+  }
+
+  &__result-icon {
+    color: $color-accent;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__result-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 8px;
+  }
+
+  &__result-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-accent;
+    margin: 0 0 12px;
+  }
+
+  &__result-desc {
+    font-size: 1rem;
+    color: $color-text-secondary;
+    line-height: 1.5;
+    margin: 0 0 24px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__result-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  &__result-old {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: line-through;
+  }
+
+  &__result-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-accent;
+  }
+
+  &__result-cta {
+    width: 100%;
+    min-width: 0;
+  }
+
+  &__restart {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 16px;
+    padding: 4px 8px;
+    font-family: inherit;
+    transition: color 0.2s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+}

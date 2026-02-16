@@ -4,7 +4,7 @@ import { paths } from './paths.js';
 
 export const bs = browserSync.create();
 
-export function serve(htmlTask, scssTask, jsTask, imagesTask, assetsTask, publicTask) {
+export function serve(htmlTask, scssTask, jsTask, imagesTask, publicTask) {
   function watch() {
     bs.init({
       server: { baseDir: 'dist' },
@@ -16,7 +16,6 @@ export function serve(htmlTask, scssTask, jsTask, imagesTask, assetsTask, public
     gulp.watch(paths.scss.watch, scssTask);
     gulp.watch(paths.js.src, jsTask);
     gulp.watch(paths.images.src, imagesTask);
-    gulp.watch(paths.assets.src, assetsTask);
     gulp.watch(paths.public.src, publicTask);
   }
   return watch;
