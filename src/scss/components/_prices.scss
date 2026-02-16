@@ -38,7 +38,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        border-color: rgba(255, 128, 0, 0.2);
+        border-color: $color-border-hover;
       }
     }
 
