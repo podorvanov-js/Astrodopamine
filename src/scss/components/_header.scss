@@ -134,6 +134,10 @@
 
     &.active::before {
       width: 100%;
+      @media (max-width: $bp-tablet) {
+        width: 50%;
+        transform: translateX(50%);
+      }
     }
 
     @media (any-hover: hover) {
