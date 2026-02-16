@@ -5,15 +5,6 @@
 			Астрология — это не&nbsp;гадание, а&nbsp;точный расчёт потенциала. Выберите уровень проработки, который актуален
 			для вас сейчас.
 		</p>
-		<button class="prices__button button button--light" data-modal-open="quiz">
-			<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-				<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-			</svg>
-			Не знаете, что выбрать? Пройдите квиз
-		</button>
-		<div class="prices__list">
-			@@loop('./sections/price-card.html', '../../data/services.json')
-		</div>
 		<div class="prices__timer timer">
 			<div class="timer__icon">
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -46,9 +37,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="prices__list">
+			@@loop('./sections/price-card.html', '../../data/services.json')
+		</div>
 		<p class="prices__note">Каждая услуга — серия живых аудиосообщений + текстовый конспект</p>
-		<a href="https://t.me/Alina_natalis" target="_blank" class="prices__button button">
-			Получить скидку
-		</a>
+		<div class="prices__actions">
+			<button class="prices__button button button--light" data-modal-open="quiz">
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+				</svg>
+				Не знаете, что выбрать? Пройдите квиз
+			</button>
+			<a href="https://t.me/Alina_natalis" target="_blank" class="prices__button button">
+				Получить скидку
+			</a>
+		</div>
 	</div>
 </section>

@@ -22,6 +22,7 @@
     @media (max-width: $bp-small-mobile) {
       flex-direction: column;
       width: 100%;
+      gap: 20px 40px;
     }
   }
 }
