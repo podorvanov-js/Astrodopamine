@@ -38,7 +38,6 @@
     transition: border-color 0.2s;
     border: 1px solid transparent;
     flex: 1;
-    min-width: 240px;
 
     @media (any-hover: hover) {
       &:hover {
