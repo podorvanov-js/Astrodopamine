@@ -1,6 +1,8 @@
+@use 'sass:color';
+
 // Colors
-$color-accent: #ff8000;
-$color-accent-hover: #ff9400;
+$color-accent: #f000ff;
+$color-accent-hover: color.scale($color-accent, $lightness: -20%);
 $color-bg: #000;
 $color-card: #111;
 $color-card-shadow: #191919;

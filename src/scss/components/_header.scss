@@ -132,6 +132,10 @@
       background-color: $color-accent;
     }
 
+    &.active::before {
+      width: 100%;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         &::before {
