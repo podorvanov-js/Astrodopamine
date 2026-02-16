@@ -32,6 +32,7 @@
     transform: translate(-50%, -50%);
     animation: chart-spin 120s linear infinite;
     pointer-events: none;
+    color: $color-accent;
   }
 
   @keyframes chart-spin {
