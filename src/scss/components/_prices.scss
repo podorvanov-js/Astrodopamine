@@ -165,15 +165,32 @@
     margin-bottom: 40px;
   }
 
-  &__timer {
+  &__call {
+    font-size: 1.2rem;
+    font-weight: 700;
     margin-bottom: 40px;
   }
 
+  &__timer {
+    margin-bottom: 40px;
+  }
+  &__button {
+    min-width: 380px;
+    @media (max-width: $bp-mobile) {
+      min-width: 0;
+    }
+  }
+
   &__actions {
-    display: grid;
+    display: flex;
+    align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @media (max-width: $bp-small-mobile) {
+      flex-direction: column;
+      width: 100%;
       gap: 20px 40px;
     }
   }
