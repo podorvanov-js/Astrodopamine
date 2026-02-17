@@ -1,7 +1,13 @@
 @use '../base/variables' as *;
 
 .why {
-  &__grid {
+  &__head {
+    margin-bottom: 60px;
+    @media (max-width: $bp-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -14,7 +20,6 @@
       gap: 20px;
     }
   }
-
   &__card {
     background: $color-card;
     padding: 28px;

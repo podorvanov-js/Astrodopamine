@@ -15,7 +15,7 @@
   &__container {
     max-width: $container-width;
     margin: 0 auto;
-    padding: 12px 36px;
+    padding: 12px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +151,7 @@
     @media (max-width: $bp-tablet) {
       color: $color-text;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       width: 100%;
       text-align: center;
       padding: 14px 20px;
@@ -198,7 +198,11 @@
       color: $color-accent;
     }
   }
-
+  &__button {
+    @media (max-width: $bp-tablet) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .burger {

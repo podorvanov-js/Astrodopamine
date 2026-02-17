@@ -11,7 +11,7 @@ export const paths = {
   },
   js: {
     src: 'src/js/main.js',
-    watch: 'src/js/**/*.js',
+    watch: ['src/js/**/*.js', 'src/data/**/*.json'],
     dest: 'dist/js'
   },
   images: {

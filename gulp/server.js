@@ -14,7 +14,7 @@ export function serve(htmlTask, scssTask, jsTask, imagesTask, publicTask) {
 
     gulp.watch(paths.html.watch, htmlTask);
     gulp.watch(paths.scss.watch, scssTask);
-    gulp.watch(paths.js.src, jsTask);
+    gulp.watch(paths.js.watch, jsTask);
     gulp.watch(paths.images.src, imagesTask);
     gulp.watch(paths.public.src, publicTask);
   }

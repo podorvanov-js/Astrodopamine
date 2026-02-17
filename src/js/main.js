@@ -4,9 +4,10 @@ import { faqInit } from './components/faq.js'
 import { videoBgInit } from './components/video-bg.js'
 import { reviewsInit } from './components/reviews.js'
 import { scrollSpyInit } from './components/scroll-spy.js'
-import { countdownInit } from './components/countdown.js'
+import { timer } from './components/timer.js'
 import { modalInit } from './components/modal.js'
 import { quizInit } from './components/quiz.js'
+import { stickyInit } from './components/sticky.js'
 
 document.addEventListener('DOMContentLoaded', function () {
 	burgerInit();
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	videoBgInit();
 	reviewsInit();
 	scrollSpyInit();
-	countdownInit();
+	timer();
 	modalInit();
 	quizInit();
+	stickyInit();
 })
