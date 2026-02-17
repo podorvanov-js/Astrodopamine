@@ -62,7 +62,7 @@ section {
   }
 }
 .button {
-  background: $color-accent;
+  background: #971e9f;
   color: $color-text;
   font-weight: 700;
   font-size: 1.2rem;
@@ -79,16 +79,6 @@ section {
   gap: 10px;
   min-width: 320px;
   text-align: center;
-  &--light {
-    background: transparent;
-    border: 1px solid $color-accent ;
-    color: $color-accent;
-    @media (any-hover: hover) {
-      &:hover {
-        color: $color-text;
-      }
-    }
-  }
   @media (any-hover: hover) {
     &:hover {
       background: $color-accent-hover;
@@ -101,6 +91,17 @@ section {
   @media (max-width: $bp-small-mobile) {
     width: 100%;
     min-width: 0;
+  }
+  &--light {
+    background: transparent;
+    border: 1px solid #971e9f;
+    color: $color-accent;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #971e9f;
+        color: $color-text;
+      }
+    }
   }
   &--min {
     font-size: 0.92rem;
