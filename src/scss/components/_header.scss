@@ -21,7 +21,8 @@
     align-items: center;
     position: relative;
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px) saturate(1.4);
+    backdrop-filter: blur(10px);
+    will-change: transform;
     border: 1px solid $color-border;
     border-radius: 20px;
 
