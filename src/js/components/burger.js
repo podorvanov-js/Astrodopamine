@@ -28,9 +28,14 @@ export function burgerInit() {
 		link.addEventListener('click', shut)
 	})
 
+	let resizeRafId = null
 	window.addEventListener('resize', () => {
-		if (window.innerWidth > 750 && nav.classList.contains('active')) {
-			shut()
-		}
+		if (resizeRafId) return
+		resizeRafId = requestAnimationFrame(() => {
+			resizeRafId = null
+			if (window.innerWidth > 750 && nav.classList.contains('active')) {
+				shut()
+			}
+		})
 	})
 }
