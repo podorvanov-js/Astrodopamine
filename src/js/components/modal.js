@@ -1,3 +1,5 @@
+import { lockScroll, unlockScroll } from '../utils/scroll-lock.js'
+
 export function modalInit() {
 	const modal = document.querySelector('.modal');
 	if (!modal) return;
@@ -13,12 +15,12 @@ export function modalInit() {
 		const target = modal.querySelector(`[data-modal-content="${name}"]`);
 		if (target) target.hidden = false;
 		modal.setAttribute('aria-hidden', 'false');
-		document.body.style.overflow = 'hidden';
+		lockScroll();
 	}
 
 	function close() {
 		modal.setAttribute('aria-hidden', 'true');
-		document.body.style.overflow = '';
+		unlockScroll();
 	}
 
 	modal.querySelectorAll('[data-modal-close]').forEach(el => {

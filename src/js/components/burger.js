@@ -1,3 +1,5 @@
+import { lockScroll, unlockScroll } from '../utils/scroll-lock.js'
+
 export function burgerInit() {
 	const burger = document.getElementById('burger-btn')
 	const nav = document.getElementById('nav-menu')
@@ -9,16 +11,15 @@ export function burgerInit() {
 		const isOpen = nav.classList.toggle('active')
 		overlay.classList.toggle('active', isOpen)
 		burger.classList.toggle('active', isOpen)
-		document.documentElement.style.overflow = isOpen ? 'hidden' : ''
-		document.body.style.overflow = isOpen ? 'hidden' : ''
+		isOpen ? lockScroll() : unlockScroll()
 	}
 
 	function shut() {
+		if (!nav.classList.contains('active')) return
 		nav.classList.remove('active')
 		overlay.classList.remove('active')
 		burger.classList.remove('active')
-		document.documentElement.style.overflow = ''
-		document.body.style.overflow = ''
+		unlockScroll()
 	}
 
 	burger.addEventListener('click', toggle)
