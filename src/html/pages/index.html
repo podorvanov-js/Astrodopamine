@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 <head>
   @@include('head.html')
   <title>Алина — астролог | Разбор натальной карты онлайн</title>
+  <link rel="canonical" href="https://astrodopamine.ru/" />
 </head>
-<body>
-  @@include('header.html')
+<body class="page__body">
+  <div class="page__container">
+    @@include('header.html')
 
-  <main class="main">
-    @@include('./sections/hero.html')
-    @@include('./sections/benefit.html')
-    @@include('./sections/why.html')
-    @@include('./sections/steps.html')
-    @@include('./sections/audience.html')
-    @@include('./sections/prices.html')
-    @@include('./sections/reviews.html')
-    @@include('./sections/cta.html')
-    @@include('./sections/faq.html')
-  </main>
+    <main class="main">
+      @@include('./sections/hero.html')
+      @@include('./sections/benefit.html')
+      @@include('./sections/why.html')
+      @@include('./sections/steps.html')
+      @@include('./sections/audience.html')
+      @@include('./sections/prices.html')
+      @@include('./sections/reviews.html')
+      @@include('./sections/cta.html')
+      @@include('./sections/faq.html')
+    </main>
 
-  @@include('footer.html')
+    @@include('footer.html')
+  </div>
   @@include('./components/bg-video.html')
   @@include('./components/modal.html')
   @@include('./components/cookie.html')

@@ -19,7 +19,7 @@
 * {
   box-sizing: border-box;
 }
-html {
+.page {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   overflow-x: clip;
@@ -27,16 +27,24 @@ html {
   @media (max-width: $bp-tablet) {
     scroll-padding-top: 0;
   }
-}
-body {
-  background: $color-bg;
-  color: $color-text;
-  font-family: $font-base;
-  margin: 0;
-  padding: 0;
-  line-height: 1.3;
-  position: relative;
-  overflow-x: clip;
+
+  &__body {
+    background: $color-bg;
+    color: $color-text;
+    font-family: $font-base;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    position: relative;
+    overflow-x: clip;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
 }
 a {
   color: $color-accent;
