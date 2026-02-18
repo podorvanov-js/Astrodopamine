@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use 'sass:color';
 
 .footer {
   width: 100%;
@@ -41,7 +42,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        border-color: $color-border-hover;
+        border-color: color.scale($color-accent, $lightness: -70%);
       }
     }
 

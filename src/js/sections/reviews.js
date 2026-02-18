@@ -11,10 +11,10 @@ export function reviewsInit() {
 		loop: true,
 		speed: 600,
 		autoHeight: true,
-		autoplay: {
-			delay: 4000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 4000,
+		// 	disableOnInteraction: false,
+		// },
 		pagination: {
 			el: '.reviews__pagination',
 			clickable: true,

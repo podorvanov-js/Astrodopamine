@@ -103,7 +103,7 @@
   }
 
   &__link {
-    color: $color-text-soft;
+    color: $color-text-secondary;
     font-weight: 600;
     font-size: 0.92rem;
     text-decoration: none;
@@ -183,7 +183,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: $color-text-muted;
+    color: $color-text-secondary;
     font-size: 0.88rem;
     text-decoration: none;
     padding: 6px 0;
