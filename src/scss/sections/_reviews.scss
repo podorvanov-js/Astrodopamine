@@ -20,7 +20,7 @@
   &__footer {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
 
   &__avatar {
@@ -42,7 +42,7 @@
     color: $color-text;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     span {
       font-size: 0.8rem;
       color: $color-text-secondary;

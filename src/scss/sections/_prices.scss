@@ -175,6 +175,9 @@
 
   &__head {
     margin-bottom: 40px;
+    &:has(.timer.hidden) {
+      display: none;
+    }
   }
   &__button {
     min-width: 380px;

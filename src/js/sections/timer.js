@@ -29,7 +29,7 @@ function getNextHoliday() {
 
 function disableSale() {
 	const timer = document.querySelector('.prices__timer')
-	if (timer) timer.style.display = 'none'
+	if (timer) timer.classList.add('hidden')
 
 	document.querySelectorAll('.prices__card').forEach((card) => {
 		const oldEl = card.querySelector('.prices__old')
