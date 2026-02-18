@@ -20,7 +20,7 @@ export function modalInit() {
 
 	function close() {
 		modal.setAttribute('aria-hidden', 'true');
-		unlockScroll();
+		modal.addEventListener('transitionend', () => unlockScroll(), { once: true });
 	}
 
 	modal.querySelectorAll('[data-modal-close]').forEach(el => {

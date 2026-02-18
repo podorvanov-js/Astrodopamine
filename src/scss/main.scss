@@ -5,17 +5,18 @@
 
 @use 'components/video-bg';
 @use 'components/header';
-@use 'components/hero';
-@use 'components/benefit';
-@use 'components/why';
-@use 'components/steps';
-@use 'components/audience';
-@use 'components/prices';
 @use 'components/timer';
-@use 'components/reviews';
-@use 'components/faq';
-@use 'components/cta';
 @use 'components/modal';
-@use 'components/quiz';
 @use 'components/cookie';
 @use 'components/footer';
+
+@use 'sections/hero';
+@use 'sections/benefit';
+@use 'sections/why';
+@use 'sections/steps';
+@use 'sections/audience';
+@use 'sections/prices';
+@use 'sections/reviews';
+@use 'sections/faq';
+@use 'sections/cta';
+@use 'sections/quiz';
