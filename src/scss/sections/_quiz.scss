@@ -37,7 +37,7 @@
   &__options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
   }
 
   &__option {
@@ -99,7 +99,7 @@
   }
 
   &__result-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: $color-accent;
     margin: 0 0 12px;
