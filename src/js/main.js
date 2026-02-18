@@ -1,12 +1,12 @@
 import { burgerInit } from './components/burger.js'
 import { footerInit } from './components/footer.js'
-import { faqInit } from './components/faq.js'
-import { reviewsInit } from './components/reviews.js'
-import { scrollSpyInit } from './components/scroll-spy.js'
-import { timer } from './components/timer.js'
+import { faqInit } from './sections/faq.js'
+import { reviewsInit } from './sections/reviews.js'
+import { scrollSpyInit } from './sections/scroll-spy.js'
+import { timer } from './sections/timer.js'
 import { modalInit } from './components/modal.js'
-import { quizInit } from './components/quiz.js'
-import { stickyInit } from './components/sticky.js'
+import { quizInit } from './sections/quiz.js'
+import { stickyInit } from './sections/sticky.js'
 
 document.addEventListener('DOMContentLoaded', function () {
 	burgerInit();
