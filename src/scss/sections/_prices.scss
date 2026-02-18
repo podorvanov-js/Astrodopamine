@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use 'sass:color';
 
 .prices {
   &__container {
@@ -18,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   &__list {
     display: grid;
@@ -50,7 +51,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        border-color: $color-border-hover;
+        border-color: color.scale($color-accent, $lightness: -70%);
       }
     }
 
@@ -88,7 +89,7 @@
 
   &__heading {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 8px;
     color: $color-accent;
   }
@@ -96,7 +97,7 @@
   &__tag {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
 
   &__content {
@@ -161,7 +162,7 @@
 
   &__note {
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: $color-text-secondary;
     font-size: 1rem;
     margin-bottom: 40px;
   }
@@ -174,6 +175,9 @@
 
   &__head {
     margin-bottom: 40px;
+    &:has(.timer.hidden) {
+      display: none;
+    }
   }
   &__button {
     min-width: 380px;
