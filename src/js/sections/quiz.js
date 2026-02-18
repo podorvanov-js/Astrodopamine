@@ -1,4 +1,5 @@
 import services from '../../data/services.json'
+import { formatPrice } from '../utils/format-price.js'
 
 const SERVICES_MAP = {};
 services.forEach(s => { SERVICES_MAP[s.id] = s; });
@@ -51,8 +52,8 @@ export function quizInit() {
 		const service = getTopService();
 		resultTitle.textContent = service.title;
 		resultDesc.textContent = service.desc;
-		resultOld.textContent = service.old;
-		resultValue.textContent = service.price;
+		resultOld.textContent = formatPrice(service.old);
+		resultValue.textContent = formatPrice(service.price);
 		resultLink.href = service.link;
 		showStep('result');
 	}

@@ -1,4 +1,5 @@
 import { burgerInit } from './components/burger.js'
+import { pricesInit } from './sections/prices.js'
 import { footerInit } from './components/footer.js'
 import { faqInit } from './sections/faq.js'
 import { reviewsInit } from './sections/reviews.js'
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', function () {
 	modalInit();
 	quizInit();
 	stickyInit();
+	pricesInit();
 })
