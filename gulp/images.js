@@ -10,6 +10,8 @@ function resize(scale, suffix) {
     objectMode: true,
     async transform(file, _, callback) {
       if (file.isNull() || file.isStream()) return callback(null, file);
+      const ext = path.extname(file.path).toLowerCase();
+      if (ext === '.svg' || ext === '.gif') return callback(null, file);
       try {
         const metadata = await sharpModule(file.contents).metadata();
         const newWidth = Math.round(metadata.width * scale);
@@ -53,6 +55,8 @@ function toWebpTransform(quality) {
     objectMode: true,
     async transform(file, _, callback) {
       if (file.isNull() || file.isStream()) return callback(null, file);
+      const ext = path.extname(file.path).toLowerCase();
+      if (ext === '.svg' || ext === '.gif') return callback();
       try {
         file.contents = await sharpModule(file.contents)
           .webp({ quality })
