@@ -7,7 +7,6 @@
 		"old": "5000",
 		"price": "3000",
 		"link": "https://t.me/astrodopamine/43",
-		"icon": "../images/icons/icon-dna.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	},
@@ -19,7 +18,6 @@
 		"old": "4000",
 		"price": "2500",
 		"link": "https://t.me/astrodopamine/45",
-		"icon": "../images/icons/icon-fin.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	},
@@ -31,7 +29,6 @@
 		"old": "3500",
 		"price": "2000",
 		"link": "https://t.me/astrodopamine/46",
-		"icon": "../images/icons/icon-karma.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	},
@@ -43,7 +40,6 @@
 		"old": "8000",
 		"price": "5000",
 		"link": "https://t.me/astrodopamine/50",
-		"icon": "../images/icons/icon-arch.svg",
 		"featured": true,
 		"cardClass": "prices__card prices__card--featured",
 		"badge": "<span class=\"prices__badge\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"#fff\" aria-hidden=\"true\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg></span>"
@@ -56,7 +52,6 @@
 		"old": "3000",
 		"price": "1500",
 		"link": "https://t.me/astrodopamine/47",
-		"icon": "../images/icons/icon-image.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	},
@@ -68,7 +63,6 @@
 		"old": "3000",
 		"price": "2000",
 		"link": "https://t.me/astrodopamine/48",
-		"icon": "../images/icons/icon-child.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	},
@@ -80,7 +74,6 @@
 		"old": "3000",
 		"price": "2000",
 		"link": "https://t.me/astrodopamine/49",
-		"icon": "../images/icons/icon-prog.svg",
 		"cardClass": "prices__card",
 		"badge": ""
 	}
