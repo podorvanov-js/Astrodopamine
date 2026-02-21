@@ -1,13 +1,12 @@
 <section class="prices" id="prices">
 	<div class="prices__container container">
-		<h2 class="prices__title title">Услуги</h2>
-		<p class="prices__subtitle subtitle">
-			Астрология — это не&nbsp;гадание, а&nbsp;точный расчёт потенциала. Выберите уровень проработки, который актуален
-			для вас сейчас.
-		</p>
 		<div class="prices__sticky" data-sticky data-sticky-offset="100, 920:80 ,760:60">
 			<div class="prices__head">
-				@@include('./components/timer.html', {"class": "prices__timer"})
+				<h2 class="prices__title title">Услуги</h2>
+				<p class="prices__subtitle subtitle">
+					Астрология — это не&nbsp;гадание, а&nbsp;точный расчёт потенциала. Выберите уровень проработки, который актуален
+					для вас сейчас.
+				</p>
 			</div>
 			<div class="prices__list">
 				@@loop('./components/price-card.html', '../../data/services.json')

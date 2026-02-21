@@ -9,9 +9,9 @@
   }
   &__subtitle {
     &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       @media (max-width: $bp-mobile) {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
     }
   }
@@ -174,7 +174,11 @@
   }
 
   &__head {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    @media (max-width: $bp-mobile) {
+      margin-bottom: 30px;
+    }
+
     &:has(.timer.hidden) {
       display: none;
     }
