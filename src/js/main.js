@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	faqInit();
 	reviewsInit();
 	scrollSpyInit();
-	timer();
+	// timer();
 	modalInit();
 	quizInit();
 	stickyInit();
